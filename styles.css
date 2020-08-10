@@ -1,0 +1,88 @@
+/* Global styles */
+body {
+  background-color: #FF6F59;
+  height: 100%;
+  margin: 0;
+  background-attachment: fixed;
+  font-family: 'Fjalla One', sans-serif;
+  box-sizing: border-box;
+}
+
+#master-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* Metronome app */
+#grid-container {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "bpm bpm bpm"
+    "play pause sample";
+  border: solid #254441 40px;
+  border-radius: 50px;
+  background-color: #43AA8B;
+  box-shadow: #B2B09B 0px 0px 100px;
+}
+
+.grid-item-1 {
+  /* Tempo input */
+  grid-area: bpm;
+  text-align: center;
+  height: 200px;
+  padding-top: 20px;
+} 
+
+  h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+  }
+
+
+  #tempo-field {
+    height: 100px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    background-color: #ffffff27;
+    border: solid #25444194 2px;
+    border-radius: 5px;
+    width: 90%;
+  }
+
+
+.grid-item-2 {
+  /* Play button */
+  grid-area: play;
+  text-align: center;
+  height: 75px;
+}
+
+.grid-item-3 {
+  /* Pause button */
+  grid-area: pause;
+  text-align: center;
+  height: 75px;
+}
+
+.grid-item-4 {
+  /* Change sample button */
+  grid-area: sample;
+  text-align: center;
+  height: 75px;
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3a3a3a;
+  font-size: 1.1rem;
+  height: 50px;
+  width: 50px;
+  background-color: #B2B09B;
+  border: solid #d1d0c7 3px;
+  border-radius: 5px;
