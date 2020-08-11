@@ -1,4 +1,6 @@
 /* Global styles */
+/* color scheme: https://coolors.co/ff6f59-254441-43aa8b-b2b09b-ef3054 */
+
 body {
   background-color: #FF6F59;
   height: 100%;
@@ -17,13 +19,14 @@ body {
 
 
 /* Metronome app */
+
 #grid-container {
   display: grid;
-  grid-template-columns: 150px 150px 150px;
-  grid-template-rows: auto;
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-template-rows: 200px 100px;
   grid-template-areas:
-    "bpm bpm bpm"
-    "play pause sample";
+    "bpm bpm bpm bpm"
+    "play pause sample volume";
   border: solid #254441 40px;
   border-radius: 50px;
   background-color: #43AA8B;
@@ -34,8 +37,9 @@ body {
   /* Tempo input */
   grid-area: bpm;
   text-align: center;
-  height: 200px;
-  padding-top: 20px;
+  padding-top: 38px;
+  justify-self: center;
+  align-self: center;
 } 
 
   h1 {
@@ -46,7 +50,7 @@ body {
 
   #tempo-field {
     height: 100px;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fredoka One', cursive;    ;
     font-size: 5rem;
     text-align: center;
     background-color: #ffffff27;
@@ -55,34 +59,79 @@ body {
     width: 90%;
   }
 
+  #tempo-field:focus {
+    outline: none;
+  }
+
 
 .grid-item-2 {
   /* Play button */
   grid-area: play;
   text-align: center;
-  height: 75px;
+  justify-self: center;
+  align-self: center;
 }
 
 .grid-item-3 {
   /* Pause button */
   grid-area: pause;
   text-align: center;
-  height: 75px;
+  justify-self: center;
+  align-self: center;
 }
 
 .grid-item-4 {
   /* Change sample button */
   grid-area: sample;
   text-align: center;
-  height: 75px;
+  justify-self: center;
+  align-self: center;
 }
 
+.grid-item-5 {
+  /* Change volume button */
+  grid-area: volume;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+}
+
+  #volume-slider {
+    width: 100px;
+    background-color: #43AA8B;
+  }
+
+
+/* button style */
 button {
   font-family: Arial, Helvetica, sans-serif;
   color: #3a3a3a;
   font-size: 1.1rem;
   height: 50px;
-  width: 50px;
+  width: 90px;
   background-color: #B2B09B;
   border: solid #d1d0c7 3px;
   border-radius: 5px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #9e9b8b;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button-active {
+  background-color: #9e9b8b;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+i {
+  font-size: 1.5rem;
+  padding-top: 4px;
+}
